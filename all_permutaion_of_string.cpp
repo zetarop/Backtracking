@@ -20,8 +20,6 @@ void permutate(char* A, int L, int R)
 	}
 }
 
-
-
 int main()
 {
 	char A[]="abc";
