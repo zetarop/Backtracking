@@ -41,11 +41,11 @@ int main()
 	cin>>sum;
 
 	for(int i=0;i<n;i++)
-    {
-        ve<int> temp;
-        temp.pb(v[i]);
-        subset(temp, v, i, sum,0);
-    }
+    	{
+		ve<int> temp;
+		temp.pb(v[i]);
+		subset(temp, v, i, sum,0);
+   	}
 
 	return 0;
 }
