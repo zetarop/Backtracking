@@ -4,28 +4,18 @@
 #define ll long long
 using namespace std;
 
-
-void print(ve<ve<int>> v)
+void subset(ve<int> temp, int start, ve<int> v, int n)
 {
-	for(auto a:v)
-	{
-		for(auto b:a)
-			cout<<b<<" ";
-		cout<<endl;
-	}
-}
-
-void subset(ve<ve<int>>& Ans, ve<int> temp, int start, ve<int> v, int n)
-{
-	Ans.pb(temp);
+	for(auto a:temp)
+		cout<<a<<" ";
+	cout<<endl;
 	for(int i=start+1;i<n;i++)
 	{
 		ve<int> temp1=temp;
 		temp1.pb(v[i]);
-		subset(Ans, temp1, i, v, n);
+		subset(temp1, i, v, n);
 	}
 }
-
 
 int main()
 {
@@ -35,9 +25,7 @@ int main()
 	for(auto &a:v)
 		cin>>a;
 	sort(v.begin(), v.end());
-	ve<ve<int> > Ans;
 	ve<int> temp;
-	subset(Ans, temp, -1, v, n);
-	print(Ans);
+	subset(temp, -1, v, n);
 	return 0;
 }
