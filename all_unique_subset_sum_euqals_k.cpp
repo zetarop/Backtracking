@@ -1,5 +1,5 @@
 /*
-  Assuming input array have unique element.
+  Assuming input array have unique elements.
 */
 
 #include<bits/stdc++.h>
